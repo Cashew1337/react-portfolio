@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary: rgb(212, 223, 205);
+  --secondary: rgb(195, 191, 216);
+  --tertiary: rgb(174, 159, 226);
+  --vibrant: rgb(149, 127, 235);
+  --dark: black;
+  --light: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: linear-gradient(rgb(212, 223, 205), rgb(195, 191, 216), rgb(174, 159, 226), rgb(149, 127, 235), rgb(116, 96, 243));
+  background-repeat: no-repeat;
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.5;
+  font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  padding: 10px 5% 10px 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  box-shadow: 0 5px 30px;
+}
+
+header h1 {
+  font-size: 4vw;
+  font-style: italic;
+  padding: 5px 2% 5px 5%;
+  color: var(--vibrant);
+
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 15px 15px;
+  font-size: 1.5rem;
+}
+
+nav a:link {
+  color: var(--tertiary);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+main {
+  margin-top: 15px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+
+}
+
+.hero-banner {
+  background-image: url("../public/images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 25vh;
+  padding: 1% 5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.hero-banner h2 {
+  font-size: 2rem;
+  color: var(--vibrant);
+  line-height: 1;
+  display: inline;
+}
+
+.page-selection {
+  margin: 20px 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.page-selection > h2 {
+  flex: 0 0 15%;
+  text-align: right;
+  padding-right: 12px;
+  border-right: 5px solid var(--primary);
+  font-size: 3vw;
+  line-height: 1;
+}
+
+.page-selection article {
+  flex: 0 0 75%;
+}
+
+.page-selection div {
+  flex: 0 0 75%;
+}
+
+.page-selection address {
+  flex: 0 0 75%;
+}
+
+article p {
+  margin-bottom: 18px;
+  font-size: 1.75rem;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-box{
+  padding: 0 0 15px 0;
+  margin: 0.5em;
+  text-decoration: none;
+  font-size: 1rem;
+  align-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex-item {
+  border: 3px solid var(--dark);
+  color: var(--tertiary);
+  padding: 0 0 15px 0;
+  margin: 0.5em;
+  text-decoration: none;
+  font-size: 1rem;
 }
+
+.flex-item:hover {
+  background-color: var(--primary);
+}
+
+.flex-item h3 {
+  font-size: 3rem;
+  color: var(--dark);
+}
+
+.flex-item span {
+  font-size: 30px;
+  color: var(--dark);
+}
+
+address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+}
+
+address a {
+  color: var(--dark);
+  padding: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-style: normal;
+  display: inline-block;
+  margin: 0 0.1rem 0.05rem;
+  background-image: linear-gradient(270deg, var(--primary) 0%, var(--primary) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3rem;
+  background-position: bottom;
+  transition: all 0.15s ease-in;
+}
+
+address a:hover {
+  background-size: 100%;
+  color: var(--vibrant);
+}
+
+/* .horiseon {
+  background-image: url("../images/SEO.jpg");
+  background-size: auto;
+}
+
+.placeholder1 {
+  background-image: url("../images/web.jpg");
+  background-size: auto;
+} */

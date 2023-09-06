@@ -1,36 +1,37 @@
+import React, { useState } from 'react';
 
-import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-
-const Footer = () => {
-    const location = useLocation();
-    const navigate = useNavigate();
+function Footer() {
+    // Contact me section cards for the footer of portfolio
     return (
-        <footer className="w-100 mt-auto bg-secondary p-4">
-            <div className="container text-center mb-5">
-                {location.pathname !== '/' && (
-                    <button
-                        className="btn btn-dark mb-3"
-                        onClick={() => navigate(-1)}
-                    >
-                        &larr; Go Back
-                    </button>
-                )}
-                <h4>
-                    Made with{' '}
-                    <span
-                        className="emoji"
-                        role="img"
-                        aria-label="heart"
-                        aria-hidden="false"
-                    >
-                        ❤️
-                    </span>{' '}
-                    by the Matt Caschetto.
-                </h4>
-            </div>
-        </footer>
-    );
-};
 
-export default Footer;
+        <div className="contact">
+
+            <section className="card">
+
+                <div className="card-header">
+                    <a href="https://www.linkedin.com/in/matthew-caschetto-35b956108/" target="_blank">
+                        <img src="./images/linkedin.png" alt="Linkedin Graphic" />
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <section className="card">
+
+                <div className="card-header">
+                    <a href="https://github.com/cashew1337" target="_blank">
+                        <img src="./images/github-icon.jpg" alt="Email Graphic" />
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    );
+}
+
+export default Footer; 
